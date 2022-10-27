@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+    rel="stylesheet">
+<!--custom CSS -->
+    <link rel="stylesheet" href="/static/index.css">
+    <title>CantHide | Find Locations and profiles</title>
+<!-- Custom JS -->
+    <script src="/static/Script.js" defer></script>
+</head>
+<body class="home">
+<!-- skip to main button -->
+    <a class="ff-sans-cond letter-spacing-1 text-white " href="#main">Skip to content</a>
+    <header class="primary-header flex">
+        <div>
+<!-- Logo -->
+            <img src="/static/assets/logo.png" alt="CantHide Logo" class="logo">
+        </div>
+<!-- nav bar -->
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-nav underline-indicators uppercase text-white letter-spacing-2 flex">
+                <!-- <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/dashboard"><span aria-hidden="true">00</span>About</a> -->
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span>Pricing</a>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>news</a>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>blog</a>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">04</span>faq</a>
+                <li> <a class="large-click uppercase text-white letter-spacing-2" href="/logout">
+                <span aria-hidden="true">05</span>Logout</a> </li>
+            </ul>
+        </nav>
+    </header>
+<!-- main content -->
+    <main id="main" class="grid-container grid-container--home">
+        <div>
+            <h1 class="text-accent fs-700 ff-sans-normal uppercase letter-spacing-1 margin3">GeoLocation Estimation and Metadata Analysis</h1>
+            <p class="text-accent fs-500 ff-sans-normal uppercase letter-spacing-1 margin2 center">Find anyone's Location on Social Media Profile</p>
+            <button></button>
+        </div>
+        <p class="text-accent fs-600 ff-sans-normal uppercase letter-spacing-1 margin2 center numbered-title">what we do:</p>
+        <div class="flex ff-sans-cond">
+            <p class="text-accent fs-600 ff-sans-normal uppercase letter-spacing-1 margin2 center">CantHide, finds previous locations by looking at a given social media account and other Social Media accounts.</p>
+        </div>
+        <p class="text-accent fs-600 ff-sans-normal uppercase letter-spacing-1 margin3 center numbered-title">About:</p>
+        <div class="flex ff-sans-cond">
+            <ul class="flex li">
+                <li class="text-accent fs-600 ff-sans-normal uppercase letter-spacing-1 margin2 ">Using the EXIF data on the images from the social media accounts you have provided, CantHide carries out location detection. If the EXIF data is removed (as in the majority of social media applications), complicated DL models can estimate the photograph's location with great accuracy.</li>
+                <li class="text-accent fs-600 ff-sans-normal uppercase letter-spacing-1 margin2 ">Using its own methods, CantHide finds the accounts of the users whose data you want to extract on various platforms and analyzes the accounts' truth.</li>
+                <li class="text-accent fs-600 ff-sans-normal uppercase letter-spacing-1 margin2 ">By doing manipulation analysis on the photographs on the target user's profile, CantHide gives you a thorough output. The system's whitepaper and source code will shortly be made available to the public</li>
+            </ul>
+        </div>
+        <div class="text-accent fs-600 ff-sans-normal uppercase letter-spacing-1 center numbered-title">
+            <a href="#" class="text-accent fs-600 ff-sans-normal uppercase letter-spacing-1"><button class="btn-primary" >Learn More</button></a>
+        </div>
+        <div class="text-accent fs-600 ff-sans-normal uppercase letter-spacing-1 center numbered-title">
+            <p >Questions?</p>
+            <a href=""> <button class="btn-primary center">Contact US</button></a>
+        </div>
+        <div>
+            <nav>
+                
+            </nav>
+        </div>
+    </main>
+</body>
+</html>
