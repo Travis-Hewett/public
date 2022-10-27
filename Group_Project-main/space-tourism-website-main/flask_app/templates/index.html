@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/index.css">
+  <script src="/static/Script.js" defer></script>
+
+  <title>Dashboard</title>
+</head>
+<body>
+  <p>Index</p>
+  <header class="primary-header flex">
+    <div><a href="/dashboard"><img class="logo" id="logo" src="/static/assets/logo92.png" alt="logo"></a>
+    </div>
+    <div>
+      <div class="uppercase">
+        <h1 class="uppercase text-white letter-spacing-2">Welcome, {{ this_user.first_name }}!</h1>
+      </div>
+    </div>
+      <button class="mobile-nav-toggle"  aria-controls="primary-nav" aria-expanded="false"><span class="sr-only"></span></button>
+      <nav>
+        <ul id="primary-nav" data-visible="false"class="primary-nav underline-indicators flex">
+          <li class="active"><a class="uppercase text-white letter-spacing-2" href="/dashboard">
+            <span aria-hidden="true">00</span>Dashboard</a></li>
+          <li><a class="large-click uppercase text-white letter-spacing-2" href="/new">
+              <span aria-hidden="true">01</span>Edit Strategy</a></li>
+          <li><a class="large-click uppercase text-white letter-spacing-2" href="/user/account">
+            <span aria-hidden="true">02</span>Account</a></li>
+          <li> <a class="large-click uppercase text-white letter-spacing-2" href="/logout">
+            <span aria-hidden="true">03</span>Logout</a> </li>
+      </nav>
+  </header>
+  <div class="container flex">
+    <form action="/strategies/add_to_db" method="POST">
+      <!-- <div class="dropdown" data-dropdown>
+        <button class="link uppercase" data-dropdown-button>Testing Pair</button>
+        <div class="dropdown-menu"> -->
+          <div class="pair-form">
+            <label for="testing pair">Testing Pair</label>
+            <input type="text" name="ticker" id="ticker">
+          </div>
+        <!-- </div> -->
+      <!-- </div> -->
+      <!-- first indicator -->
+      <!-- <div class="dropdown" data-dropdown>
+          <button class="link uppercase" data-dropdown-button>Indicator 1</button>
+          <div class="dropdown-menu information-grid">
+            <a class="uppercase text-white letter-spacing-2" href="#">EMA</a> -->
+            <div class="pair-form">
+                <label for="indicator_one">Indicator 1</label>
+                <input type="number" min="1" max="240" name="indicator_one">
+            </div>
+          <!-- </div> -->
+      </div>
+      <!-- second indicator -->
+      <!-- <div class="dropdown" data-dropdown>
+          <button class="link uppercase" data-dropdown-button>Indicator 2</button>
+          <div class="dropdown-menu information-grid">
+              <a class="uppercase text-white letter-spacing-2" href="#">EMA</a> -->
+              <div class="pair-form">
+                  <label for="indicator_two">indicator_two</label>
+                  <input type="number" min="1" max="240" name="indicator_two">
+              </div>
+          <!-- </div> -->
+      </div>
+      <div class="uppercase text-white letter-spacing-2 flex ">
+        <input type="submit" value="Save Test">
+      </div>
+    </form>
+    <!-- testing pair -->
+    <div class="container-fluid">
+      <table class="table">
+        <thead>
+          <tr>
+            <td>Strategy Name</td>
+            <td>Added By</td>
+            <td>Ticker</td>
+            <td>Indicator 1</td>
+            <td>Indicator 2</td>
+            <td>Action</td>
+          </tr>
+        </thead>
+        <tbody>
+            {% for this_strategy in all_stategies %}
+            <tr>
+                <td>This Strategy</td>
+                <td>{{this_user.first_name}}</td>
+                <td>{{this_strategy.ticker}}</td>
+                <td>{{this_strategy.indicator_one}}</td>
+                <td>{{this_strategy.indicator_two}}</td>
+                <td><a href="/edit/{{this_strategy.id}}">Edit</a> <a href="/{{this_strategy.id}}/delete">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+  </div>
+
+
+
+
+
+</body>
+</html>
